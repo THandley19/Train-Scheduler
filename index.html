@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Train Scheduler</title>
+    <!-- firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    
 </head>
 
 <body>
+    
     <div id="header-container" class=".col-sm-6">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -24,50 +31,50 @@
     <div id="current-schedule">
         <table class="table table-hover">
             <thead>
-              <tr>
-                <th scope="col">Train</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Frequency (min)</th>
-                <th scope="col">Next Arrival</th>
-                <th scope="col">Minutes Away</th>
-              </tr>
+                <tr>
+                    <th scope="col">Train</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Trenton Express</th>
-                <td>Trenton</td>
-                <td>25</td>
-                <td>05:35 PM</td>
-                <td>10</td>
-              </tr>
+                <tr>
+                    <th scope="row">Trenton Express</th>
+                    <td>Trenton</td>
+                    <td>25</td>
+                    <td>05:35 PM</td>
+                    <td>10</td>
+                </tr>
             </tbody>
-          </table>
+        </table>
     </div>
 
-    <div id="add-train" class=".container-md">
+    <div id="add-train">
         <form>
             <div class="form-group">
-                <label for="exampleInputEmail1">Train Name</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="Train Name">Train Name</label>
+                <input type="text" class="form-control" id="train-name" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Destination</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="Destination">Destination</label>
+                <input type="text" class="form-control" id="train-destination">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">First Train Time (HH:mm - military time)</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="1st train time">First Train Time (HH:mm - military time)</label>
+                <input type="time" class="form-control" id="train-time">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Frequency (min)</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="Frequency">Frequency (min)</label>
+                <input type="number" class="form-control" id="train-frequency">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
         </form>
     </div>
 
-
-
+    <script src="./assets/javascript/app.js"></script>
+    
 </body>
 
 </html>
