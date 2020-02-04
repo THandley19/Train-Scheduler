@@ -1,10 +1,3 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyCM-W1bft1pBjHJxxakFiTG-wJ4jbXWTXM",
-    authDomain: "train-scheduler-91c6e.firebaseapp.com",
-    databaseURL: "https://train-scheduler-91c6e.firebaseio.com",
-    projectId: "train-scheduler-91c6e",
-};
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
